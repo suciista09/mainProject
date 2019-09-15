@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'MainProjectTest'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    //implementation project(':mathModule') //use this if you want implement from local dir, suitable for local development
+    implementation('org.suci.module:mathModule'){//use this to add dependency from specific release or branch from github
+        version{
+            branch = 'develop'
+        }
+    }
+}

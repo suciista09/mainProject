@@ -1,0 +1,13 @@
+rootProject.name = 'mainProject'
+
+//if you want to import from local dir
+/*include(':mathModule')
+project(':mathModule').projectDir = new File(settingsDir, '../MathModule')*/
+
+//if you want to import from github repo
+sourceControl {
+    gitRepository("https://github.com/suciista09/MathModule.git") {
+        producesModule("org.suci.module:mathModule")
+    }
+}
+
